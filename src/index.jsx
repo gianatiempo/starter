@@ -30,17 +30,17 @@ const AppRoot = () => (
   </React.StrictMode>
 )
 
-if (process.env.NODE_ENV === 'development') {
-  import('./mocks/browser')
-    .then(({ worker }) => {
-      worker.start()
-      message.config({ maxCount: 1 })
-    })
-    .then(() => {
-      root.render(<AppRoot />)
-    })
-} else {
-  message.config({ maxCount: 1 })
+// if (process.env.NODE_ENV === 'development') {
+import('./mocks/browser')
+  .then(({ worker }) => {
+    worker.start()
+    message.config({ maxCount: 1 })
+  })
+  .then(() => {
+    root.render(<AppRoot />)
+  })
+// } else {
+//   message.config({ maxCount: 1 })
 
-  root.render(<AppRoot />)
-}
+//   root.render(<AppRoot />)
+// }
