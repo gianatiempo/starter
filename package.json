@@ -1,0 +1,138 @@
+{
+  "name": "gianatiempo-starter",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@ant-design/pro-components": "^2.3.47",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^14.4.3",
+    "antd": "^5.0.7",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.4.5",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "@typescript-eslint/parser": "^5.46.1",
+    "@vitejs/plugin-react": "^3.0.0",
+    "eslint": "^8.29.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-config-react-app": "^7.0.1",
+    "eslint-import-resolver-alias": "^1.1.2",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "msw": "^0.49.2",
+    "prettier": "^2.8.1",
+    "typescript": "^4.9.4",
+    "vite": "^4.0.1"
+  },
+  "scripts": {
+    "start": "vite",
+    "build": "vite build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "lint": "eslint --ext .js,.jsx ./src --fix"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "msw": {
+    "workerDirectory": "public"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "plugin:prettier/recommended",
+      "plugin:import/recommended"
+    ],
+    "settings": {
+      "import/resolver": {
+        "node": {
+          "extensions": [
+            ".js",
+            ".jsx"
+          ],
+          "moduleDirectory": ["src", "node_modules"]
+        },
+        "alias": {
+          "map": [
+            [
+              "@components",
+              "./src/components"
+            ],
+            [
+              "@hooks",
+              "./src/hooks"
+            ],
+            [
+              "@pages",
+              "./src/pages"
+            ],
+            [
+              "@providers",
+              "./src/providers"
+            ],
+            [
+              "@utils",
+              "./src/utils"
+            ]
+          ]
+        }
+      }
+    },
+    "rules": {
+      "import/order": [
+        "error",
+        {
+          "groups": [
+            "builtin",
+            "external",
+            "internal"
+          ],
+          "pathGroups": [
+            {
+              "pattern": "react",
+              "group": "external",
+              "position": "before"
+            }
+          ],
+          "pathGroupsExcludedImportTypes": [
+            "react"
+          ],
+          "newlines-between": "never",
+          "alphabetize": {
+            "order": "asc",
+            "caseInsensitive": true
+          }
+        }
+      ],
+      "prettier/prettier": [
+        "error",
+        {
+          "printWidth": 120,
+          "endOfLine": "lf",
+          "singleQuote": true,
+          "tabWidth": 2,
+          "indentStyle": "space",
+          "useTabs": false,
+          "jsxSingleQuote": true,
+          "trailingComma": "all",
+          "semi": false,
+          "bracketSpacing": true,
+          "bracketSameLine": true,
+          "arrowParens": "avoid"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,129 @@
+@import 'antd/dist/reset.css';
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  height: calc(100% - 64px);
+  justify-content: space-between;
+}
+
+.logo-wrapper {
+  width: 200px;
+  height: 64px;
+  position: relative;
+  z-index: 1;
+}
+
+.logo {
+  background-position: 50% 50%;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  background-image: url('./assets/logo.png');
+
+}
+
+.sider {
+  overflow: auto;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.bike-content {
+  overflow: initial;
+  height: calc(100vh - 70px);
+}
+
+.bike-footer {
+  text-align: center;
+}
+
+.loading-indicator-icon {
+  font-size: 128px;
+}
+
+.spinner-icon {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.access-wrapper {
+  padding: 30px;
+  background: #ececec;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.access-card {
+  width: 500px;
+}
+
+.access-button {
+  width: 100%;
+}
+
+.user-select {
+  width: 200px;
+}
+
+.icon-size {
+  font-size: 15px;
+}
+
+.bike-icon {
+  width: 14px;
+}
+
+.icon-size-disabled {
+  color: #ccc;
+  font-size: 15px;
+}
+
+.white-header {
+  background: 'white';
+}
+
+.page-wrapper {
+  margin: 24px 16px 0;
+}
+
+.select-size {
+  width: 200px;
+}
+
+.ant-tabs-card .ant-tabs-content {
+  height: calc(100vh - 206px);
+  margin-top: -16px;
+}
+
+.ant-tabs-card .ant-tabs-content>.ant-tabs-tabpane {
+  padding: 16px;
+  background: #fff;
+}
+
+.ant-tabs-card>.ant-tabs-nav::before {
+  display: none;
+}
+
+.ant-tabs-card .ant-tabs-tab {
+  background: transparent;
+  border-color: transparent;
+}
+
+.ant-tabs-card .ant-tabs-tab-active {
+  background: #fff;
+  border-color: #fff;
+}
